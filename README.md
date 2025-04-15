@@ -30,8 +30,9 @@ On the proejct's root folder:
 
 - `redis`: Queue and cache
 
-## Routes
+## API Routes
 
+- `GET https://localhost/api/duplicated-funds` - List duplicated funds
 - `GET https://localhost/api/funds` - List funds
 - `PUT https://localhost/api/funds/{fund_id}` - create/update fund
 
@@ -47,3 +48,7 @@ On the proejct's root folder:
         "manager_id": 7
     }
   ```
+
+## Frontend
+
+- <http://localhost:4200>
