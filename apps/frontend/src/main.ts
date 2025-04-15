@@ -1,6 +1,9 @@
+import  'vuestic-ui/css';
 import './styles.scss';
 import { createApp } from 'vue';
 import App from './app/App.vue';
+import { createVuestic } from 'vuestic-ui';
 
-const app = createApp(App);
-app.mount('#root');
+createApp(App)
+    .use(createVuestic())
+    .mount('#root');

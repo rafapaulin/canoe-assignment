@@ -1,0 +1,31 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/backend",
+    "projectType": "application",
+    "targets": {
+        "setup": {
+            "executor": "nx:run-commands",
+            "options": {
+                "cwd": "apps/backend",
+                "commands": [
+                    "composer install",
+                    "composer run post-root-package-install",
+                    "php artisan key:generate --ansi",
+                    "php artisan sail:install",
+                    "./vendor/bin/sail up -d",
+                    "./vendor/bin/sail artisan migrate",
+                    "./vendor/bin/sail artisan db:seed"
+                ],
+                "parallel": false
+            }
+        },
+        "start": {
+            "executor": "nx:run-commands",
+            "defaultConfiguration": "development",
+            "options": {
+                "command": "./vendor/bin/sail up -d"
+            }
+        }
+    },
+    "tags": []
+}

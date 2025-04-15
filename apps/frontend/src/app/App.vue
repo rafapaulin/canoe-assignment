@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import NxWelcome from './NxWelcome.vue';
+import FundsTable from './FundsTable.vue';
+import DuplicatedFundsTable from './DuplicatedFundsTable.vue';
 </script>
 
 <template>
-  <NxWelcome title="frontend" />
+    <h1>Funds</h1>
+    <FundsTable />
+    <h1>Duplicated Funds</h1>
+    <DuplicatedFundsTable />
 </template>
-

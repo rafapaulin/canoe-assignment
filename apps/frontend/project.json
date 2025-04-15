@@ -1,0 +1,24 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/frontend",
+    "projectType": "application",
+    "targets": {
+        "setup": {
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "npm ci"
+                ]
+            }
+        },
+        "start": {
+            "executor": "nx:run-commands",
+            "defaultConfiguration": "development",
+            "options": {
+                "cwd": "apps/frontend",
+                "command": "npx vite -c vite.config.ts"
+            }
+        }
+    },
+    "tags": []
+}
